@@ -159,9 +159,14 @@ let material = new THREE.ShaderMaterial({
               discard; // Discard fragments that are not part of the outline
           }
 
+          // Add light and shadow effects
+          vec3 lightDirection = normalize(vec3(1.0, 1.0, 1.0));
+          float lightIntensity = max(dot(normalize(vec3(vUv, distort)), lightDirection), 0.0);
+          distort += 0.8 * lightIntensity; // Adjust light intensity
+
           // Set dark grey color for the outline
           vec3 outlineColor = vec3(0.169,0.169,0.169); // Dark grey color
-          gl_FragColor = vec4(outlineColor, 1.0);
+          gl_FragColor = vec4(outlineColor * distort, 1.0);
       }
     `
 });
