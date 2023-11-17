@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  overflow: hidden;
+  overscroll-behavior: none;
+  position: fixed;
+  -moz-osx-font-smoothing: grayscale;
+  top: 0;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  left: 0;
+  opacity: 1;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#canvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #000;
+}
