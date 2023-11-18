@@ -5,6 +5,7 @@ This project showcases a 3D blob created using Three.js with interactive mouse c
 ## Overview
 
 The project leverages the power of Three.js to render a visually engaging 3D blob. Users can interact with the blob using mouse controls, providing an immersive experience.
+Demo: https://distorted-outline-blob-threejs.vercel.app/
 
 ## Features
 
